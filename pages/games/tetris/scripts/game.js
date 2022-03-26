@@ -57,7 +57,7 @@ function setup() {
                 settings.showFinesseErrors = true;
             }
             if (str.indexOf("redo finesse errors") != -1) {
-                settings.redoFinesseErrors = true;
+                settings.redoFinesseErrors = false;
             }
         }
 

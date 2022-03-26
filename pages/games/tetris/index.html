@@ -8,6 +8,44 @@
 </head>
 
 <body onload="setup();">
+    <style>
+        body { 
+        background-color:#161923;
+        color:white;
+        font-family: "Lucida Console", "Courier New", monospace;
+        } 
+        .gameButton {
+        border: none;
+        color: white;
+        font-size: 18px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        border-radius: 25px;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        display: inline-block;
+        }
+        .button1 {
+        background-color: #161923; 
+        color: white; 
+        border: 2px solid #161923;
+        }
+
+        .button1:hover {
+        background-color: #52525e;
+        color: white;
+        }
+
+        .bbaDiv {
+            text-align: left;
+        }
+        </style>
+    <div class="bbaDiv">
+
+        <button class="gameButton button1" id="backArrowButton" onclick="goBack()"><img src="https://door-dash.netlify.app/global-assets/backArrow.png" height="16" width="16"/></button>
+
+        </div>
     <div id="page-area-container">
         <div id="page-area">
             <div class="title">Tetresse - Practice Tool</div>
