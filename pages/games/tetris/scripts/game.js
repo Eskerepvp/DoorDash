@@ -1725,11 +1725,11 @@ class Game {
         return array;
     }
 
-    // returns object with all settings: use .label to get a list of labels of the settings
+
     static getDefaultSettings() {
         var settings = {
-            das: 125, //
-            arr: Math.floor(1000 / 60),
+            das: 167, 
+            arr: 33,
             gravityDelay: 1000,
             maxMoves: 20,
             softDropSpeed: 25,
