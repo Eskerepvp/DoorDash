@@ -10,7 +10,7 @@ document.getElementById("consoleButton").addEventListener("click", injectConsole
 
 function injectGames() {
   alert("kys");
-  document.body.innerHTML = '<body> <script src="https://bitbucket.org/eskerepvp/doordash/raw/3f1167412bad9aad969bbdacee509fcf74815f0e/scripts/scripts.js"></script> <style> body {  background-color:#161923; font-family: "Lucida Console", "Courier New", monospace; } .gamesDiv { text-align: center; } </style> <div class="bbaDiv"><button class="button button1" onclick="goBack()"><img src="https://bitbucket.org/eskerepvp/doordash/raw/7c1735f5c0e3815194695a695b92f1079fcda294/global-assets/backArrow.png" height="16" width="16"/></button></div> <div class="gamesDiv"> <button class="gameButtons tetrisButton" onclick="injectTetris()"><img src="https://bitbucket.org/eskerepvp/doordash/raw/7c1735f5c0e3815194695a695b92f1079fcda294/global-assets/tetris.png" height="200" width="200"/></button> </div> </body> '
+  document.body.innerHTML = '<body> <script src="https://door-dash.netlify.app/scripts/scripts.js"></script> <style> body {  background-color:#161923; font-family: "Lucida Console", "Courier New", monospace; } .gamesDiv { text-align: center; } </style> <div class="bbaDiv"><button class="button button1" onclick="goBack()"><img src="https://bitbucket.org/eskerepvp/doordash/raw/7c1735f5c0e3815194695a695b92f1079fcda294/global-assets/backArrow.png" height="16" width="16"/></button></div> <div class="gamesDiv"> <button class="gameButtons tetrisButton" onclick="injectTetris()"><img src="https://bitbucket.org/eskerepvp/doordash/raw/7c1735f5c0e3815194695a695b92f1079fcda294/global-assets/tetris.png" height="200" width="200"/></button> </div> </body> '
 }
 
 function injectBypass() {
@@ -24,5 +24,5 @@ function injectConsole() {
 
 function goBack() {
   window.location.reload();
-  (function(){document.body.appendChild(document.createElement('script')).src='https://bitbucket.org/eskerepvp/doordash/raw/858ffbf09fec3e1b1d05bf7c80f15ea0b6c091bc/scripts/injectSite.js'})()
+  (function(){document.body.appendChild(document.createElement('script')).src='https://door-dash.netlify.app/scripts/injectsite.js'})()
 }
