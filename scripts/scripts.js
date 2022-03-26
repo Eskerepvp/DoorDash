@@ -9,6 +9,7 @@ document.getElementById("consoleButton").addEventListener("click", injectConsole
 // button functions
 
 function injectGames() {
+  alert("kys");
   document.body.innerHTML = '<body> <script src="https://bitbucket.org/eskerepvp/doordash/raw/3f1167412bad9aad969bbdacee509fcf74815f0e/scripts/scripts.js"></script> <style> body {  background-color:#161923; font-family: "Lucida Console", "Courier New", monospace; } .gamesDiv { text-align: center; } </style> <div class="bbaDiv"><button class="button button1" onclick="goBack()"><img src="https://bitbucket.org/eskerepvp/doordash/raw/7c1735f5c0e3815194695a695b92f1079fcda294/global-assets/backArrow.png" height="16" width="16"/></button></div> <div class="gamesDiv"> <button class="gameButtons tetrisButton" onclick="injectTetris()"><img src="https://bitbucket.org/eskerepvp/doordash/raw/7c1735f5c0e3815194695a695b92f1079fcda294/global-assets/tetris.png" height="200" width="200"/></button> </div> </body> '
 }
 
