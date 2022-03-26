@@ -1,45 +1,169 @@
-<head>
-    <title>Tetresse v3</title>
-</head>
-<body onload="tetresse.setup()">
-    <script src="https://door-dash.netlify.app/pages/games/tetris/tetressev3.js"></script>
-    <script src="https://door-dash.netlify.app/pages/games/tetris/modules/graphics.js"></script>
-    <script src="https://door-dash.netlify.app/pages/games/tetris/modules/defaultMaster.js"></script>
-    <script src="https://door-dash.netlify.app/pages/games/tetris/modules/controls.js"></script>
-    <script src="https://door-dash.netlify.app/pages/games/tetris/modules/gravity.js"></script>
-    <link rel="stylesheet" href="https://door-dash.netlify.app/pages/games/tetris/css/defaultGraphics.css">
-    <style>.gameButton {
-        border: none;
-        color: white;
-        font-size: 18px;
-        transition-duration: 0.4s;
-        cursor: pointer;
-        border-radius: 25px;
-        height: 25px;
-        width: 25px;
-        border-radius: 50%;
-        display: inline-block;
-        }</style>
-    <div class="bbaDiv">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html;  charset=ISO-8859-1" />
+    <title>TwitchTetris</title>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet" type="text/css" />
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script src="cookie.js"></script>
+    <script src="tetris_main.js?nnn"></script>
+    <script>
+      function onClickEvent(event){
+      if (Tetris.currentInstance) {
+      Tetris.currentInstance.mouseClicked(event.layerX, event.layerY);
+      }
+      }
+    </script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="//www.googletagmanager.com/gtag/js?id=UA-141389937-1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
 
-        <button class="gameButton button1" id="backArrowButton" onclick="goBack()"><img src="https://door-dash.netlify.app/global-assets/backArrow.png" height="16" width="16"/></button>
-        </div>
-    <div id="header">
-        <div class="center-area">
-            <div class="name">Tetresse</div>
-            <div class="mode">Developer Mode</div>
-            <div class="settings-button">Settings</div>
-        </div>
-    </div>
-    <div id="play">
-        <div class="board">
-            <tetresse id="tetresse-game-one">Graphics did not work</tetresse>
-        </div>
-        <div class="options">
-            <div class="group">
-                <div class="heading">Game Options</div>
-                <div class="button">Enable gravity</div>
-            </div>
-        </div>
-    </div>
-</body>
+	  gtag('config', 'UA-141389937-1');
+	</script>
+	<style type="text/css">
+		html {
+			height:100%;
+		}
+		body {
+			margin:0;
+			height:100%;
+			width: 100%;
+		}
+	</style>
+	<!-- Zoomscript start -->
+    <script type="text/javascript" charset="utf-8" src="jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="zoomscript.js"></script>
+	<script type="text/javascript">
+		// Initialer Aufruf nach dem Laden der Seite
+		window.onready = function () {
+			zoomInitialisieren(960,768); 
+		}; 
+	</script>
+	<!-- Zoomscript zuende -->
+	
+</head>
+<body>
+	<div style="width: 960px; margin: 0 auto;">
+		<table id="page" border="0" class="mainTable">
+		  <tr>
+		  <td width="160" style="vertical-align: top; padding-right: 10px;">
+			<div class="rossipottiAds" style="margin-bottom: 1em; height: 600px;">
+				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- hochkant-160x600 -->
+				<ins class="adsbygoogle"
+					 style="display:inline-block;width:160px;height:600px"
+					 data-ad-client="ca-pub-5901461589828548"
+					 data-ad-slot="7357360740"></ins>
+				<script>
+					 (adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>		  
+		</td>
+		<td class="menuCell">
+		  <div class="menu">
+			<img class="menuLogo" src="media/background/logo.png">
+			<br/><br/>
+
+			<a href="index2.html" class="bareLink">
+			  <div class="menuItem selectedMenuItem">Play TwitchTetris</div>
+			</a>
+			<br/>
+			<a href="controls.html" class="bareLink">
+			  <div class="menuItem">Controls Options</div>
+			</a>
+			<br/>
+			<a href="/" class="bareLink">
+			  <div class="menuItem" style="background-color:#9933cc; color:#FFFF00;" onMouseOver="this.style.color='#FF0000'"
+	   onMouseOut="this.style.color='#FFFF00'">Zur Rossipotti Startseite</div>
+			</a>
+			<br/>
+			<a href="about.html" class="bareLink">
+			  <div class="menuItem">About TwitchTetris</div>
+			</a>
+			<br/>
+			<a href="http://www.leighpauls.com" class="bareLink" target="_blank">
+			  <div class="menuItem">About the Developer</div>
+			</a>
+			<br/>
+
+			<div class="instructions">
+			  <b> &gt TwitchTetris --help </b>
+			  <p>Use the keyboard controls to rotate and move the blocks as they fall</p>
+			  <p>Place the blocks to form horizontal lines, which will be removed and make all the blocks above fall down. If the blocks reach the top of the screen, the game is over!</p>
+			  <p>Clear multiple lines at a time, or clear lines in consective moves to earn more points.</p>
+			</div>
+
+		  </div>
+		</td>
+		<td class="contentCell">
+		  <div class="gamePanel">
+			<div class="gameElements">
+			  <div class="ttyOutput scoreOutput" id="scoreDiv"></div>
+			  <div class="ttyOutput linesOutput" id="linesDiv"></div>
+			  <div class="ttyOutput levelOutput" id="levelDiv"></div>
+			  <div class="ttyOutput tickerOutput" id="tickerDiv"></div>
+			  
+			  <div class="gameEndOutputHidden" id="gameEndContainer">
+			<div style="padding:5px;" id="gameEndDiv"></div>
+			  </div>
+			  
+			  <canvas class="gameCanvas" id="gameCanvas" width="600" height="500" onclick="onClickEvent(event)" class="gameCanvas">Your browser does not natively support Html5, or the Canvas Tag. Using this browser is slowing the progress of the web. Please get a modern browser, such as Google Chrome or Mozzila FireFox</canvas>
+			</div>
+			<div class="controlsTitle">
+			  <br/>
+			  <b>Controls:</b><br/>
+			  <table border="1" cellpadding="3" class="controlsTable">
+				<tr class="controlsTableHeader">
+				  <td width="80">Move Block</td>
+				  <td width="80">Soft Drop</td>
+				  <td width="80">Rotate</td>
+				  <td width="80">Save Piece</td>
+				  <td width="80">Hard Drop</td>
+				  <td width="80">Pause</td>
+				</tr>
+
+				<tr>
+				  <td><span id="shiftLeft">Left</span>, <span id="shiftRight">Right</span></td>
+				  <td><span id="softDrop">Down</span></td>
+				  <td><span id="rotateLeft">Z</span>, <span id="rotateRight">X, Up</span></td>
+				  <td><span id="swap">C, Shift</span></td>
+				  <td><span id="hardDrop">Space</span></td>
+				  <td>Esc</td>
+				</tr>
+
+			  </table>
+			</div>
+			<br/>
+			<a href="controls.html" class="bareLink">
+			  <div class="menuItem">Controls Options</div>
+			</a>
+			<br/>
+			<div class="rossipottiAds" style="height: 100px; width: 600px;">
+				<input type="hidden" name="IL_IN_TAG" value="2"/>
+				<!-- quer -->
+				<ins class="adsbygoogle"
+					 style="display:inline-block;width:600px;height:100px"
+					 data-ad-client="ca-pub-5901461589828548"
+					 data-ad-slot="6331174405">
+					 <!--
+					 falsche Groesse:
+					 data-ad-format="auto"
+					 data-full-width-responsive="true"
+					 -->
+					 </ins>
+				<script>
+					 (adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+				</div>
+			
+		  </div>
+		</td>
+		<td width="20"> </td>
+		</tr>
+		</table>
+	</div>
+  </body>
+</html>
