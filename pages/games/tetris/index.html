@@ -1,52 +1,28 @@
-<!-- TODO: add rest of stats to stats options, add scroll to overflowing dropdown menu, add vertical constraint so board doesn't go off bottom of page -->
-<!doctype html>
 <head>
-    <title>Tetresse</title>
+    <title>Tetresse v3</title>
+    <script src="tetresse v3.js"></script>
+    <script src="modules/graphics.js"></script>
+    <script src="modules/defaultMaster.js"></script>
+    <script src="modules/controls.js"></script>
+    <script src="modules/gravity.js"></script>
 </head>
-
-<body onload="setup();">
-    <script src="https://door-dash.netlify.app/pages/games/tetris/scripts/game.js"></script>
-    <script src="https://door-dash.netlify.app/pages/games/tetris/scripts/other.js"></script>
-    <link rel="stylesheet" href="https://door-dash.netlify.app/pages/games/tetris/css/style.css">
-    <link rel="stylesheet" href="https://door-dash.netlify.app/pages/games/tetris/css/basicpage.css">
-    <link rel="stylesheet" href="https://door-dash.netlify.app/pages/games/tetris/css/background.css">
-    <div class="bbaDiv">
-
-        <button class="gameButton button1" id="backArrowButton" onclick="goBack()"><img src="https://door-dash.netlify.app/global-assets/backArrow.png" height="16" width="16"/></button>
-        <button class ="gameButton button2" id="startGameBtn" onclick="toggleButton()">Test</button>
+<body onload="tetresse.setup()">
+    <div id="header">
+        <div class="center-area">
+            <div class="name">Tetresse</div>
+            <div class="mode">Developer Mode</div>
+            <div class="settings-button">Settings</div>
         </div>
-    <div id="page-area-container">
-        <div id="page-area">
-            <div class="title">Tetresse - Practice Tool</div>
-            <div id="play-area">
-                <div class="game"></div>
+    </div>
+    <div id="play">
+        <div class="board">
+            <tetresse id="tetresse-game-one">Graphics did not work</tetresse>
+        </div>
+        <div class="options">
+            <div class="group">
+                <div class="heading">Game Options</div>
+                <div class="button">Enable gravity</div>
             </div>
-            <table id="stats">
-                <tr>
-                    <td>Game Time</td>
-                    <td style="text-align: right;">
-                        <div class="game-0-time" style="display:inline;"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Finesse Score</td>
-                    <td style="text-align: right;">
-                        <div class="game-0-finesse-errors" style="display: inline;"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Finesse Tips</td>
-                    <td style="text-align: right;">
-                        <div class="game-0-finesse-errors-p" style="display: inline;"></div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Lines Cleared</td>
-                    <td style="text-align: right;">
-                        <div class="game-0-lines-cleared" style="display: inline;"></div>
-                    </td>
-                </tr>
-            </table>
         </div>
     </div>
 </body>
