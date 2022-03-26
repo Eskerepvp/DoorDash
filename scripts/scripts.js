@@ -5,6 +5,8 @@ document.getElementById("bypassButton").addEventListener("click", injectBypass);
 
 document.getElementById("consoleButton").addEventListener("click", injectConsole);
 
+document.getElementById("backArrowButton").addEventListener("click", goBack);
+
 
 // button functions
 

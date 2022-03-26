@@ -14,17 +14,45 @@
             <style>
             body { 
             background-color:#161923;
+            color:white;
             font-family: "Lucida Console", "Courier New", monospace;
+            } 
+            .gameButton {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 25px;
             }
-            .gamesDiv {
-                text-align: center;
+            .button1 {
+             background-color: Black; 
+            color: white; 
+            border: 2px solid #008CBA;
             }
+
+            .button1:hover {
+            background-color: #008CBA;
+            color: white;
+            }
+            
             </style>
 
         
-<div class="bbaDiv"><button class="button button1" onclick="goBack()"><img src="https://door-dash.netlify.app/global-assets/backArrow.png" height="16" width="16"/></button></div>
+            <div class="bbaDiv">
+
+            <button class="gameButton button1" id="backArrowButton"><img src="https://door-dash.netlify.app/global-assets/backArrow.png" height="16" width="16"/></button>
+
+            </div>
+
             <div class="gamesDiv">
-            <button class="gameButtons tetrisButton" id="tetrisButton"><img src="https://door-dash.netlify.app/global-assets/tetris.png" height="200" width="200"/></button>
+
+            <button class="gamesButtons tetrisButton" id="tetrisButton"><img src="https://door-dash.netlify.app/global-assets/tetris.png" height="200" width="200"/></button>
 
             </div>
             <script src="https://door-dash.netlify.app/scripts/scripts.js"></script>
