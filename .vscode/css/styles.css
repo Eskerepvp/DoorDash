@@ -1,0 +1,61 @@
+         
+        h1 {
+            text-align: center;
+            font-family: "Courier New", "Courier New", monospace;
+            } 
+            body { 
+            background-color:#161923;
+            color:white;
+            font-family: "Lucida Console", "Courier New", monospace;
+            } 
+            
+            .button {
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 25px;
+}
+
+.button1 {
+  background-color: Black; 
+  color: white; 
+  border: 2px solid #008CBA;
+}
+
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button2 {
+  background-color: black; 
+  color: white; 
+  border: 2px solid #4CAF50;
+}
+
+.button2:hover {
+background: linear-gradient(139.84deg, #A692ED 14.35%, #6CECAD 45.6%, #D87EAA 82.79%);
+  color: white;
+}
+
+.button3 {
+  background-color: black; 
+  color: white; 
+  border: 2px solid #008CBA;
+}
+
+.button3:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.buttonDiv {
+    text-align: center;
+}
