@@ -1,12 +1,24 @@
 
 document.getElementById("gamesButton").addEventListener("click", loadGames);
 
+document.getElementById("bypassButton").addEventListener("click", loadBypass);
+
+document.getElementById("consoleButtonn").addEventListener("click", loadConsole);
+
 
 
 // button functions
 
 function loadGames() {
-  location.replace("https://www.w3schools.com");
+  location.replace("https://door-dash.netlify.app/pages/games/tetris/");
+}
+
+function loadBypass() {
+  alert("Coming Soon™")
+}
+
+function loadConsole() {
+  var firebug=document.createElement('script');firebug.setAttribute('src','https://luphoria.com/fbl/fbl/firebug-lite-debug.js');document.body.appendChild(firebug);(function(){if(window.firebug.version){firebug.init();}else{setTimeout(arguments.callee);}})();void(firebug);
 }
 
 /*function injectGames() {
