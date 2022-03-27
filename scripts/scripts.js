@@ -5,12 +5,12 @@ document.getElementById("bypassButton").addEventListener("click", loadBypass);
 
 document.getElementById("consoleButtonn").addEventListener("click", loadConsole);
 
-
+document.getElementById("tetrisButton").addEventListener("click", loadTetris);
 
 // button functions
 
 function loadGames() {
-  location.replace("https://door-dash.netlify.app/pages/games/tetris/");
+  location.replace("https://door-dash.netlify.app/pages/games.html");
 }
 
 function loadBypass() {
@@ -19,6 +19,10 @@ function loadBypass() {
 
 function loadConsole() {
   var firebug=document.createElement('script');firebug.setAttribute('src','https://luphoria.com/fbl/fbl/firebug-lite-debug.js');document.body.appendChild(firebug);(function(){if(window.firebug.version){firebug.init();}else{setTimeout(arguments.callee);}})();void(firebug);
+}
+
+function loadTetris() {
+  location.replace("https://door-dash.netlify.app/pages/games/tetris");
 }
 
 /*function injectGames() {
