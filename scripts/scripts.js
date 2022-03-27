@@ -17,7 +17,7 @@ function injectGames() {
 // games
 
   function injectTetris() {
-    document.head.innerHTML = '<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet" type="text/css" /> <link href="https://door-dash.netlify.app/pages/games/tetris/styles.css" rel="stylesheet" type="text/css" /> <script src="https://door-dash.netlify.app/pages/games/tetris/cookie.js"></script> <script src="https://door-dash.netlify.app/pages/games/tetris/tetris_main.js"></script> <script> function onClickEvent(event){ if (Tetris.currentInstance) { Tetris.currentInstance.mouseClicked(event.layerX, event.layerY); } } </script> '
+    document.head.innerHTML = '<title>TwitchTetris</title> <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet" type="text/css" /> <link href="https://door-dash.netlify.app/pages/games/tetris/styles.css" rel="stylesheet" type="text/css" /> <script src="https://door-dash.netlify.app/pages/games/tetris/cookie.js"></script> <script src="https://door-dash.netlify.app/pages/games/tetris/tetris_main.js"></script> <script> function onClickEvent(event){ if (Tetris.currentInstance) { Tetris.currentInstance.mouseClicked(event.layerX, event.layerY); } } </script> '
   }
 
 function injectBypass() {
