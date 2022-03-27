@@ -279,7 +279,7 @@ body
 {
     top: 60px; left: 195px;
     width: 210px; height: 216px;
-    background-image: url('media/background/endconsole.png');
+    background-image: url('https://www.rossipotti.de/ausgabe28/tetris/media/background/endconsole.png');
     visibility: hidden;
 }
 
@@ -293,5 +293,5 @@ body
     z-index: 2;
     top: 60px; left: 195px;
     width: 210px; height: 216px;
-    background-image: url('media/background/endconsole.png');
+    background-image: url('https://www.rossipotti.de/ausgabe28/tetris/media/background/endconsole.png');
 }
