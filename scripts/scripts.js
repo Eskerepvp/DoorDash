@@ -22,7 +22,7 @@ function loadConsole() {
 }
 
 function loadTetris() {
-  location.replace("https://door-dash.netlify.app/pages/games/tetris");
+  location.replace("https://door-dash.netlify.app/pages/games/tetris/index.html");
 }
 
 /*function injectGames() {
