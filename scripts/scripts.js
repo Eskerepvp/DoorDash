@@ -17,7 +17,7 @@ function injectGames() {
 // games
 
   function injectTetris() {
-    document.body.innerHTML = '<body onload="tetresse.setup()"> <script src="https://door-dash.netlify.app/pages/games/tetris/tetressev3.js"></script> <script src="https://door-dash.netlify.app/pages/games/tetris/modules/graphics.js"></script> <script src="https://door-dash.netlify.app/pages/games/tetris/modules/defaultMaster.js"></script> <script src="https://door-dash.netlify.app/pages/games/tetris/modules/controls.js"></script> <script src="https://door-dash.netlify.app/pages/games/tetris/modules/gravity.js"></script> <link rel="stylesheet" href="https://door-dash.netlify.app/pages/games/tetris/css/defaultGraphics.css"> <style>.gameButton { border: none; color: white; font-size: 18px; transition-duration: 0.4s; cursor: pointer; border-radius: 25px; height: 25px; width: 25px; border-radius: 50%; display: inline-block; }</style> <div class="bbaDiv"> <button class="gameButton button1" id="backArrowButton" onclick="goBack()"><img src="https://door-dash.netlify.app/global-assets/backArrow.png" height="16" width="16"/></button> </div> <div id="header"> <div class="center-area"> <div class="name">Tetresse</div> <div class="mode">Developer Mode</div> <div class="settings-button">Settings</div> </div> </div> <div id="play"> <div class="board"> <tetresse id="tetresse-game-one">Graphics did not work</tetresse> </div> <div class="options"> <div class="group"> <div class="heading">Game Options</div> <div class="button">Enable gravity</div> </div> </div> </div '
+    document.head.innerHTML = '<head><title>TwitchTetris</title></head>'
   }
 
 function injectBypass() {
