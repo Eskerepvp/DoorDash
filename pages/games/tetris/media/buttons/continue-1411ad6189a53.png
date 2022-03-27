@@ -119,16 +119,3 @@
 					</g>
 				</svg>
 			</div>
-			<div class="info-box">
-				<h1>Not Found</h1>
-				<h2></h2>
-			</div>
-		</div>
-		
-		<div>
-			<div>Return to <a href="https://replit.com">Replit.com</a>?</div>
-		</div>
-	</div>
-</body>
-
-</html>
