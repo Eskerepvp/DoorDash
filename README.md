@@ -1,2 +1,3 @@
 # DoorDash
-Something I made to bypass GoGuardian
+
+GoGuardian bypass I made at school.
